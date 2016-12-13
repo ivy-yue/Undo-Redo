@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		8992692C1E0017CE00885605 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8992692B1E0017CE00885605 /* main.cpp */; };
+		899269341E00189300885605 /* History.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 899269321E00189300885605 /* History.cpp */; };
+		8992693A1E001B2A00885605 /* CommandGroup.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 899269381E001B2A00885605 /* CommandGroup.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,11 @@
 /* Begin PBXFileReference section */
 		899269281E0017CE00885605 /* Redo */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Redo; sourceTree = BUILT_PRODUCTS_DIR; };
 		8992692B1E0017CE00885605 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		899269321E00189300885605 /* History.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = History.cpp; sourceTree = "<group>"; };
+		899269331E00189300885605 /* History.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = History.hpp; sourceTree = "<group>"; };
+		899269361E00199200885605 /* Command.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Command.hpp; sourceTree = "<group>"; };
+		899269381E001B2A00885605 /* CommandGroup.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CommandGroup.cpp; sourceTree = "<group>"; };
+		899269391E001B2A00885605 /* CommandGroup.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CommandGroup.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +65,11 @@
 			isa = PBXGroup;
 			children = (
 				8992692B1E0017CE00885605 /* main.cpp */,
+				899269321E00189300885605 /* History.cpp */,
+				899269381E001B2A00885605 /* CommandGroup.cpp */,
+				899269391E001B2A00885605 /* CommandGroup.hpp */,
+				899269361E00199200885605 /* Command.hpp */,
+				899269331E00189300885605 /* History.hpp */,
 			);
 			path = Redo;
 			sourceTree = "<group>";
@@ -119,6 +131,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				899269341E00189300885605 /* History.cpp in Sources */,
+				8992693A1E001B2A00885605 /* CommandGroup.cpp in Sources */,
 				8992692C1E0017CE00885605 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
