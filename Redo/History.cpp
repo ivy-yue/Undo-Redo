@@ -57,6 +57,7 @@ void History::limit( unsigned int numCommands ) {
 
 
 void History::add( Command* command, bool execute ) {
+    //撤销之后执行新的add，即执行新的action，LastExcuted到列表最后的这一段记录会被删除
     if ( lastExecuted + 1 < history.size() ) {
         int count = (int)history.size() - ( lastExecuted + 1 );
         int begin = lastExecuted + 1;
@@ -102,3 +103,4 @@ void History::redo() {
         lastExecuted++;
     }
 }
+

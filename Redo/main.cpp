@@ -1,7 +1,7 @@
 //
 //  main.cpp
 //  Redo
-//
+//  undo-撤销 redo-重做/回滚
 //  Created by wangyue on 2016/12/13.
 //  Copyright © 2016年 ___ivy___. All rights reserved.
 //
@@ -18,7 +18,7 @@ public:
     string text;
     
     void print() const {
-        cout << "Document text: " << text << "\n";
+        cout << "Output text: " << text << "\n";
     }
 };
 
@@ -46,7 +46,9 @@ public:
     }
     
     void undo() {
+       
         auto len = document.text.length() - s.length();
+        
         document.text.erase( len );
     }
 };
@@ -86,14 +88,14 @@ int main() {
     document.print();
     
     cout<<"\n\n*******If I Redo Now, Nothing should be changed**********\n"<<endl;
+    //undoList 撤销列表上存有2个action redoList重做列表被清空
     history.redo(); // !X
     document.print();
-    
-    
+
     cout<<"\n\n********************Undo Once:***************************\n"<<endl;
     history.undo(); // !
     document.print();
-    
+
     cout<<"\n\n********************Undo Once:***************************\n"<<endl;
     history.undo(); //
     document.print();
@@ -106,12 +108,24 @@ int main() {
     history.redo(); // !X
     document.print();
 
-    cout<<"\n\n********************Save Once:***************************\n"<<endl;
+    
+    cout<<"\n\n\n********************Save Once:***************************\n"<<endl;
     history.save(); // !X
     document.print();
     
-    cout<<"\n\n********************Redo Once:***************************\n"<<endl;
+    cout<<"\n********************Redo Once:***************************\n"<<endl;
     history.redo(); // !X
+    document.print();
+    cout<<"\n********************Undo Once:***************************\n"<<endl;
+    history.undo(); // !
+    document.print();
+    
+    cout<<"\n\n\n********************Clear Once:***************************\n"<<endl;
+    //清空history列表
+    history.clear(); // !
+    document.print();
+    cout<<"\n********************Undo Once:***************************\n"<<endl;
+    history.undo(); // !
     document.print();
     
     cout<<endl;
